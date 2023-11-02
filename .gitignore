@@ -1,5 +1,7 @@
 # Test files
 test
+binary_tree_print.c
+main.c
 
 ### C ###
 # Prerequisites

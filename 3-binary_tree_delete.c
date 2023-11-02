@@ -9,20 +9,20 @@
 
 void binary_tree_delete(binary_tree_t *tree)
 {
-    if (!tree)
-    {
-        return;
-    }
+	if (!tree)
+	{
+		return;
+	}
 
-    /* post-order traversal to delete nodes */
-    if (tree->left != NULL)
-    {
-        binary_tree_delete(tree->left);
-    }
-    if (tree->right != NULL)
-    {
-        binary_tree_delete(tree->right);
-    }
+	/* post-order traversal to delete nodes */
+	if (tree->left != NULL)
+	{
+		binary_tree_delete(tree->left);
+	}
+	if (tree->right != NULL)
+	{
+		binary_tree_delete(tree->right);
+	}
 
-    free(tree);
+	free(tree);
 }

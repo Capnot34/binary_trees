@@ -1,5 +1,6 @@
 #include "binary_trees.h"
 #include "101-binary_tree_levelorder.c"
+
 /**
  * binary_tree_is_complete - Check if a binary tree is complete
  * @tree: Pointer to the root node of the tree to check
@@ -12,10 +13,9 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 		return (0);
 	}
 
-	int flag = 0;
-
 	/* Queue for level-order traversal */
 	queue_node_t *front = NULL, *rear = NULL;
+	int flag = 0;
 
 	enqueue(&front, &rear, tree);
 

@@ -45,11 +45,11 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const
 int binary_tree_is_descendant(const binary_tree_t *node,
 		const binary_tree_t *ancestor)
 {
-	if (!node || !ancestor)
+	if (node == NULL || ancestor == NULL)
 		return (0);
 
 	if (node == ancestor)
 		return (1);
 
-	return (binary_tree_is_descendant(node, ancestor->parent));
+	return (binary_tree_is_descendant(node->parent, ancestor));
 }

@@ -1,6 +1,7 @@
 #include "binary_trees.h"
 
-int binary_tree_is_descendant(const binary_tree_t *node, const binary_tree_t *ancestor);
+int binary_tree_is_descendant(const binary_tree_t *node, const
+		binary_tree_t *ancestor);
 
 /**
  * binary_trees_ancestor - Find the lowest common ancestor of two nodes
@@ -9,7 +10,8 @@ int binary_tree_is_descendant(const binary_tree_t *node, const binary_tree_t *an
  *
  * Return: Pointer to the lowest common ancestor node or NULL
  */
-binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second)
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const
+		binary_tree_t *second)
 {
 	binary_tree_t *ancestor;
 
@@ -26,9 +28,8 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
 
 	ancestor = binary_trees_ancestor(first->parent, second);
 
-	if (!ancestor) {
+	if (!ancestor)
 		return (binary_trees_ancestor(first, second->parent));
-	}
 
 	return (ancestor);
 }
@@ -41,7 +42,8 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
  * Return: 1 if the first node is a descendant
  * of the second, 0 otherwise
  */
-int binary_tree_is_descendant(const binary_tree_t *node, const binary_tree_t *ancestor)
+int binary_tree_is_descendant(const binary_tree_t *node,
+		const binary_tree_t *ancestor)
 {
 	if (!node || !ancestor)
 		return (0);

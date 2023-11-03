@@ -14,8 +14,8 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 	}
 
 	/* Queue for level-order traversal */
-	queue_node_t *front = NULL, *rear = NULL;
 	int flag = 0;
+	queue_node_t *front = NULL, *rear = NULL;
 
 	enqueue(&front, &rear, tree);
 

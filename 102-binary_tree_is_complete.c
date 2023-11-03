@@ -7,12 +7,14 @@
  */
 int binary_tree_is_complete(const binary_tree_t *tree)
 {
+	int flag;
+
 	if (!tree)
 	{
 		return (0);
 	}
 
-	int flag = 0;
+	flag = 0;
 
 	/* Queue for level-order traversal */
 	queue_node_t *front = NULL, *rear = NULL;
